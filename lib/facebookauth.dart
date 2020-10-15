@@ -33,10 +33,9 @@ class FacebookAuth {
             default:
               break;
           }
-          return FacebookAuthProvider.getCredential(
-              accessToken: result.accessToken.token);
+          return FacebookAuthProvider.credential(result.accessToken.token);
         },
-        providerId: FacebookAuthProvider.providerId,
+        providerId: FacebookAuthProvider.PROVIDER_ID,
         protocol: protocol,
         timeout: timeout);
   }
